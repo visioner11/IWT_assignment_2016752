@@ -1,0 +1,23 @@
+.head{
+    border-style:double;
+    text-align: center;
+    margin:20px;
+    padding: 5%;
+    transform:
+    background-image: radial-gradient(rgb(152, 216, 236),rgb(244, 241, 65));
+}
+
+.aside:hover{
+    background-color:palevioletred;
+    width:42%;
+    float: left;
+    margin:20px;
+    transform:scale(1.2);
+   
+   border-style:solid;
+   border-color: darkgreen;
+   
+}
+body{
+    background-image:radial-gradient(orange,yellow,red);
+}

@@ -1,0 +1,92 @@
+.flex-con{
+
+  background-image: radial-gradient(blue,rgb(63,53,143));
+    
+    opacity: 0.8;
+    
+    height:500px;
+    width:500px;
+    position: relative;
+    top:15%;
+    left:30%;
+    display:flex;
+    border-style: solid;
+    border-color: black;
+}
+
+.flex-con>div{
+  background-color:rgb(244, 70, 70);
+  
+  border-radius: 50%;
+  
+  height:50px;
+  width:50px;
+  padding: 10px;
+  margin:30px;
+  position:relative;
+  top:-70px;
+}
+
+#d1{
+  background-image: radial-gradient(yellow,red);
+  animation-name:ex;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  animation-direction: forwards;
+  animation-timing-function:ease-in;
+  animation-delay: 0.8s;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+#d2{
+  background-image: radial-gradient(yellow,red);
+  animation-name:exa;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  animation-direction: forwards;
+  animation-timing-function:ease-in;
+  animation-delay: 0.4s;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+#d3{
+  animation-name:exam;
+  background-image: radial-gradient(yellow,red);
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+  animation-direction: forwards;
+  animation-timing-function:ease-in;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+@keyframes ex{
+  0%   {left:0px; top: -70px;}
+  25%  { left:420px; top:-70px;}
+  50%  { left:420px; top:430px;}
+  75%  {left:-60px; top:430px;}
+  100% {left:-60px;top:-70px;}
+}
+
+
+@keyframes exa {
+  0%   {left:0px; top: -70px;}
+  25%  {left:300px; top:-70px;}
+  50%  {left:300px; top:430px;}
+  75%  {left:-200px; top:430px;}
+  100% {left:-200px;top:-70px;}
+}
+
+@keyframes exam {
+  0%   {left:0px; top: -70px;}
+  25%  {left:180px; top:-70px;}
+  50%  {left:180px; top:430px;}
+  75%  {left:-320px; top:430px;}
+  100% {left:-320px;top:-70px;}
+}
+  
+
+
+

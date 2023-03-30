@@ -1,0 +1,47 @@
+
+h1{
+    text-align:center;
+    padding: 20px;
+    background-image: linear-gradient(rgb(0, 213, 255));
+    font-family:'papyrus';
+    font-weight: 90px;
+}
+.main{
+    
+    float:left;
+    position: relative;
+  text-align: center;
+  color: rgb(15, 15, 15);
+}
+
+.ma{
+    
+    float:left;
+    position: relative;
+  text-align: center;
+  color: rgb(236, 232, 232);
+}
+.firstimg{
+    height: 252px;
+    width: 399px;
+}
+
+
+div{
+    padding: 30px;
+    
+    
+}
+body{
+    background-image: radial-gradient(rgb(221, 255, 0),orange,red);
+}
+.centered {
+    position: absolute;
+    font-size: larger;
+    font-weight: 900;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 40px;
+    padding-right: 50px;
+  }

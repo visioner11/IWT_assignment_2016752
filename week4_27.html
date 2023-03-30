@@ -1,0 +1,45 @@
+<!-- Create a Webpage to display digital clock that display updated time of your system
+without refreshing webpage. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Digital Clock</title>
+    <style>
+      #clock {
+        font-size: 64px;
+        text-align: center;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+
+    <script>
+      // Get the clock element
+      const clock = document.getElementById("clock");
+
+      // Define a function to update the clock time
+      function updateClock() {
+        // Get the current time
+        const now = new Date();
+
+        // Format the time as hours, minutes, and seconds
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+
+        // Set the clock text to the formatted time
+        clock.textContent = `${hours}:${minutes}:${seconds}`;
+      }
+
+      // Call the updateClock function every second to update the time
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
+
+
+
+

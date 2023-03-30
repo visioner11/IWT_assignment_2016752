@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeting Message</title>
+    <style>
+      #greeting {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="greeting"></div>
+    <script>
+      function getGreeting() {
+        var today = new Date();
+        var hour = today.getHours();
+
+        var greeting;
+        var name = prompt("Please enter your name:");
+
+        if (hour < 12) {
+          greeting = "Good Morning";
+        } else if (hour < 18) {
+          greeting = "Good Afternoon";
+        } else {
+          greeting = "Good Evening";
+        }
+
+        document.getElementById("greeting").innerHTML =
+          greeting + ", " + name + "! Click to hide.";
+
+        document.getElementById("greeting").addEventListener("click", function() {
+          document.getElementById("greeting").style.display = "none";
+        });
+      }
+
+      getGreeting();
+    </script>
+  </body>
+</html>

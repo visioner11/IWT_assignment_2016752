@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timer Example</title>
+    <script>
+      var timer; // timer variable to store the setInterval ID
+
+      function startTimer() {
+        var seconds = 0;
+        timer = setInterval(function() {
+          seconds++;
+          document.getElementById("timer").innerHTML = seconds + " sec";
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "Timer stopped";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Timer</h1>
+    <p id="timer">0 seconds</p>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+  </body>
+</html>

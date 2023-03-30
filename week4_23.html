@@ -1,0 +1,108 @@
+<!-- Create a web page to display events in card layout. An event should have image,
+title, date and description fields. Store all these values in Javascript array or object
+for multiple events and generate dynamic cards for each events on webpage. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        height: 400px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .card h3 {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+
+      .card p {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .card .date {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="events-container"></div>
+
+    <script>
+      // Define an array of events
+      const events = [
+        {
+          title: "Music Festival",
+          date: "August 20, 2023",
+          description:
+            "Join us for a day of music, food, and fun at our annual music festival. Featuring local and national artists on multiple stages.",
+          image: "https://picsum.photos/id/1015/600/400",
+        },
+        {
+          title: "Art Exhibit",
+          date: "October 5, 2023",
+          description:
+            "Explore the works of local artists at our annual art exhibit. Featuring paintings, sculptures, and mixed media.",
+          image: "https://picsum.photos/id/1025/600/400",
+        },
+        {
+          title: "Charity Auction",
+          date: "December 12, 2023",
+          description:
+            "Bid on unique items and experiences at our annual charity auction. All proceeds go to support local charities.",
+          image: "https://picsum.photos/id/1042/600/400",
+        },
+      ];
+
+      // Get the container element where the events will be displayed
+      const eventsContainer = document.getElementById("events-container");
+
+      // Loop through the events and create a card for each one
+      for (const event of events) {
+        // Create the card element
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        // Create the image element and set the src attribute to the event's image
+        const image = document.createElement("img");
+        image.setAttribute("src", event.image);
+        card.appendChild(image);
+
+        // Create the title element and set the text content to the event's title
+        const title = document.createElement("h3");
+        title.textContent = event.title;
+        card.appendChild(title);
+
+        // Create the date element and set the text content to the event's date
+        const date = document.createElement("p");
+        date.classList.add("date");
+        date.textContent = event.date;
+        card.appendChild(date);
+
+        // Create the description element and set the text content to the event's description
+        const description = document.createElement("p");
+        description.textContent = event.description;
+        card.appendChild(description);
+
+        // Add the card to the events container
+        eventsContainer.appendChild(card);
+      }
+    </script>
+  </body>
+</html>
+

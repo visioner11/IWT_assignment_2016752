@@ -1,0 +1,37 @@
+div{
+    
+    margin: 20px;
+    display: flex;
+    
+    width: 100%;
+    transform: width 2s;
+}
+div>div{
+    
+    height:200px;
+    width:600px;
+    background-size: cover;
+}
+.divo>div:hover{
+    /* width: 800px;
+    height: 400px;
+    background-size: cover; */
+    transform: scale(1.2);
+}
+#d1{
+    background-image: url("imagesiwt/IMG10.jpeg");
+    background-size: cover;
+}
+
+#d2{
+    background-image: url("imagesiwt/IMG22.jpeg");
+}
+
+#d3{
+    background-image: url("imagesiwt/IMG23.jpeg");
+}
+
+#d4{
+    background-image: url("imagesiwt/IMG24.jpeg");
+    
+}

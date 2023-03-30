@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4(24)</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+           
+        }
+        table{
+            padding-top: 50px;
+        }
+        h1{
+            color: brown;
+            padding-bottom: 40px;
+            font-family:sans-serif;
+            font-size: 50px;
+        }
+        label{
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="20" border="0">
+        <form>
+            <tr align="center">
+                <td colspan="2">
+                    <h1>TEMPERATURE CONVERTER</h1>
+                </td>
+            </tr>
+            <tr  align="center">
+                <td>
+                    <label>Input</label>
+                </td>
+                <td>
+                    <label>Output</label>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <input id="input" type="number" onchange="check()">
+                </td>
+                <td>
+                    <input id="output" type="number">
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <select id="inputTemp" onchange="check()">
+                        <option value="K">Kelvin</option>
+                        <option value="C">Celcius</option>
+                        <option value="F">Farenheit</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="outputTemp" onchange="check()">
+                        <option value="K">Kelvin</option>
+                        <option value="C">Celcius</option>
+                        <option value="F">Farenheit</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- <tr align="center">
+                <td colspan="2">
+                    <input type="button" onclick="check()" value="Convert">
+                </td>
+            </tr> -->
+        </form>
+    </table>
+</body>
+<script>
+    function check(){
+        var input=parseFloat(document.getElementById('input').value);
+        var inputTemp=document.getElementById('inputTemp').value;
+        var outputTemp=document.getElementById('outputTemp').value;
+        
+
+
+        if(inputTemp=='K' && outputTemp=='C')
+        {
+            res=input-273.15;
+        }
+        else if(inputTemp=='K' && outputTemp=='F')
+        {
+            res=(input-273.15)*(9/5)+32;
+        }
+        else if(inputTemp=='C' && outputTemp=='K')
+        {
+            res=input+273.15;
+        }
+        else if(inputTemp=='C' && outputTemp=='F')
+        {
+            res=(input*(9/5))+32;
+        }
+        else if(inputTemp=='F' && outputTemp=='C')
+        {
+            res=(input-32)*(5/9);
+        }
+        else if(inputTemp=='F' && outputTemp=='K')
+        {
+            res=(input-32)*(5/9)+273.15;
+        }
+        else
+        {
+            res=input;
+        }
+        document.getElementById('output').value = res;
+    }
+</script>
+</html>
